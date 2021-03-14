@@ -134,15 +134,15 @@
                                     <div class="col-md-6">
                                         <div class="card bg-normal text-white mb-4">
                                             <div class="card-body d-flex align-items-center justify-content-between">
-                                                <div class="text-dark stretched-link" onclick="openSide()" style="cursor:pointer">
+                                                <div class="text-dark stretched-link" onclick="openSideA()" style="cursor:pointer">
                                                     <p><span class="mr-3"><i class="fas fa-user text-primary"></i></span>Import Candidates</p>
                                                 </div>
                                                 <div class="text-dark"><i class="fas fa-check-circle"></i></div>
                                             </div>
                                         </div>
 
-                                        <div id="mySidebar" class="sideact">
-                                            <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
+                                        <div id="mySidebarA" class="sideact">
+                                            <a href="javascript:void(0)" class="closebtn" onclick="closeSideA()">&times;</a>
                                             <div class="py-3 px-4">
                                             <header class="mb-4"><p><b>Import Candidates</b></p></header>
                                             <section class="py-2">
@@ -167,17 +167,46 @@
                                                     </div>
                                                 </div>
                                             </section> 
-                                            <footer class="modal-card-foot d-flex align-items-center justify-content-s-b"></footer>
+                                            <footer class=""></footer>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card bg-normal text-white mb-4">
                                             <div class="card-body d-flex align-items-center justify-content-between">
-                                                <a class="text-dark stretched-link" href="#">
+                                                <a class="text-dark stretched-link" onclick="openSideB()" style="cursor:pointer">
                                                     <p><span class="mr-3"><i class="fas fa-building text-warning"></i></span>Import Companies & Contacts</p>
                                                 </a>
                                                 <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                        <div id="mySidebarB" class="sideact">
+                                            <a href="javascript:void(0)" class="closebtn" onclick="closeSideB()">&times;</a>
+                                            <div class="py-3 px-4">
+                                            <header class="mb-4"><p><b>Import Companies & Contacts</b></p></header>
+                                            <section class="py-2">
+                                                <div class="">
+                                                    <div class="mb-4">
+                                                        <h3 class="text-primary">Choose a CSV or XLS (Excel) file to import</h3>
+                                                        <p><a href="https://s3-ap-southeast-1.amazonaws.com/production-recruitcrm/samplecsvdata/sample_candidate_csv.csv" id="sTest-sampleFileLink">Click here</a> to download a sample file</p>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                    <input type="file" id="file" />
+                                                    <label for="file" /><i class="fas fa-upload mr-2"></i> Upload File</label>
+                                                    <p class="pl-1">Upload your CSV or XLS (Excel) file with a header row. Make sure the CSV or XLS (Excel) file has columns for all the required fields on Contacts.</p>
+                                                    </div>
+                                                    <div class="tips-list">
+                                                        <h4 class="text-primary"><i class="fas fa-question-circle mr-3"></i>Kindly ensure that</h4>
+                                                        <ul class="">
+                                                            <li><i class="fas fa-check mr-3"></i>File must be CSV or XLS (Excel) format type.</li>
+                                                            <li><i class="fas fa-check mr-3"></i>Date field format is '17 Jan 1991</li>
+                                                            <li><i class="fas fa-check mr-3"></i>You can upload upto 10000 records at a time</li>
+                                                            <li><i class="fas fa-check mr-3"></i>Please note that all the special characters in 'FirstName' and 'LastName' will be removed.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section> 
+                                            <footer class=""></footer>
                                             </div>
                                         </div>
                                     </div>
@@ -204,20 +233,144 @@
                                     <div class="col-md-6">
                                         <div class="card bg-normal text-white mb-4">
                                             <div class="card-body d-flex align-items-center justify-content-between">
-                                                <a class="text-dark stretched-link" href="#">
+                                                <a class="text-dark stretched-link" onclick="openSideE()" style="cursor:pointer">
                                                     <p><span class="mr-3"><i class="fas fa-user-plus text-primary"></i></span>Invite Teammates</p>
                                                 </a>
                                                 <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                        <div id="mySidebarE" class="sideact">
+                                            <a href="javascript:void(0)" class="closebtn" onclick="closeSideE()">&times;</a>
+                                            <div class="py-3 px-4">
+                                            <header class="mb-4"><p><b>Invite Teammates</b></p></header>
+                                            <section class="py-2">
+                                                <div class="">
+                                                    <div class="card p-4 mb-4">
+                                                        <h5 class="mb-2">Roles</h5>
+                                                        <ul class="px-4 py-2">
+                                                            <li class="mb-2"><b>Admin:</b> An "Admin" can add or delete any records. They also have complete access to the reporting suite & admin panel (except billing/payments).</li>
+                                                            <li class="mb-2"><b>Team Member:</b> A “Team Member” can view & add all data but does not have access to Delete Data, Generate Report or Access the Admin Panel.</li>
+                                                            <li class="mb-2"><b>Restricted Team Member:</b> A “Restricted Team Member” can view & edit data that either they add into the system or are assigned to. This role is generally given to freelancers.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="">
+                                                        <form>
+                                                            <div class="form-row">
+                                                                <div class="col-md-5">
+                                                                    <label for="inviteTeamEmail">Email</label>
+                                                                    <input type="email" class="form-control" id="inviteTeamEmail" placeholder="ryancooper@gmail.com">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label for="inviteTeamRole">Role</label>
+                                                                    <select id="inviteTeamRole" class="form-control">
+                                                                        <option selected>Admin</option>
+                                                                        <option>Team Member</option>
+                                                                        <option>Restricted Team Member</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label for="inviteMoreMember">Add More Member</label>
+                                                                    <input type="button" class="form-control btn btn-warning" id="inviteMoreMember" value="Add More Member">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </section> 
+                                            <footer class="d-flex align-items-center justify-content-between">
+                                                <button class="btn btn-lg btn-success mt-3">Send Invitation</button>
+                                            </footer>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card bg-normal text-white mb-4">
                                             <div class="card-body d-flex align-items-center justify-content-between">
-                                                <a class="text-dark stretched-link" href="#">
+                                                <a class="text-dark stretched-link" onclick="openSideF()" style="cursor:pointer">
                                                     <p><span class="mr-3"><i class="fas fa-video text-dark"></i></span>Help Videos</p>
                                                 </a>
                                                 <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                        <div id="mySidebarF" class="sideact">
+                                            <a href="javascript:void(0)" class="closebtn" onclick="closeSideF()">&times;</a>
+                                            <div class="py-3 px-4">
+                                            <header class="mb-4"><p><b>All - Help Videos</b></p></header>
+                                            <section class="py-2">
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="img/thumbnailurl.jfif" class="img-fluid img-thumbnail" alt="" title="">
+                                                        </div>
+                                                        <div class="col-md-8 mb-4">
+                                                            <h5 class="text-primary mb-2">Request Updated Resume</h5>
+                                                            <p class="">Request an updated resume with just once click! Check out the video to know more</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="img/thumbnailurl.jfif" class="img-fluid img-thumbnail" alt="" title="">
+                                                        </div>
+                                                        <div class="col-md-8 mb-4">
+                                                            <h5 class="text-primary mb-2">Request Updated Resume</h5>
+                                                            <p class="">Request an updated resume with just once click! Check out the video to know more</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="img/thumbnailurl.jfif" class="img-fluid img-thumbnail" alt="" title="">
+                                                        </div>
+                                                        <div class="col-md-8 mb-4">
+                                                            <h5 class="text-primary mb-2">Request Updated Resume</h5>
+                                                            <p class="">Request an updated resume with just once click! Check out the video to know more</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="img/thumbnailurl.jfif" class="img-fluid img-thumbnail" alt="" title="">
+                                                        </div>
+                                                        <div class="col-md-8 mb-4">
+                                                            <h5 class="text-primary mb-2">Request Updated Resume</h5>
+                                                            <p class="">Request an updated resume with just once click! Check out the video to know more</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="img/thumbnailurl.jfif" class="img-fluid img-thumbnail" alt="" title="">
+                                                        </div>
+                                                        <div class="col-md-8 mb-4">
+                                                            <h5 class="text-primary mb-2">Request Updated Resume</h5>
+                                                            <p class="">Request an updated resume with just once click! Check out the video to know more</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="img/thumbnailurl.jfif" class="img-fluid img-thumbnail" alt="" title="">
+                                                        </div>
+                                                        <div class="col-md-8 mb-4">
+                                                            <h5 class="text-primary mb-2">Request Updated Resume</h5>
+                                                            <p class="">Request an updated resume with just once click! Check out the video to know more</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                            </section> 
+                                            <footer class=""></footer>
                                             </div>
                                         </div>
                                     </div>
@@ -227,7 +380,7 @@
                                 <div class="mb-3">
                                     <h5 class="mb-2">Have Questions?</h5>
                                     <p class="mb-2">Use the chat icon at the bottom to ask us any questions you have. If you’re in a hurry, You can visit our help center to read our help guides.</p>
-                                    <a href="#">Visit Help Center ></a>
+                                    <a href="help-center.html">Visit Help Center ></a>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +399,7 @@
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body"><i class="fas fa-building mr-3"></i>Companies Performance</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="companies.html">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -255,7 +408,7 @@
                                 <div class="card bg-success text-white mb-4">
                                     <div class="card-body"><i class="fas fa-user-circle mr-3"></i>Jobs Listings</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="jobs.html">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -264,7 +417,7 @@
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body"><i class="fas fa-calendar-check mr-3"></i>Task & Meetings</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="task-and-meetings.html">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -524,13 +677,46 @@
 
         <script>
             // this is for side import action
-            function openSide() {
-              document.getElementById("mySidebar").style.width = "50%";
+            function openSideA() {
+              document.getElementById("mySidebarA").style.width = "40%";
               document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             }
 
-            function closeSide() {
-              document.getElementById("mySidebar").style.width = "0";
+            function closeSideA() {
+              document.getElementById("mySidebarA").style.width = "0";
+              document.body.style.backgroundColor = "white";
+            }
+
+            // this is for side import action
+            function openSideB() {
+              document.getElementById("mySidebarB").style.width = "40%";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+
+            function closeSideB() {
+              document.getElementById("mySidebarB").style.width = "0";
+              document.body.style.backgroundColor = "white";
+            }
+
+            // this is for side import action
+            function openSideE() {
+              document.getElementById("mySidebarE").style.width = "40%";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+
+            function closeSideE() {
+              document.getElementById("mySidebarE").style.width = "0";
+              document.body.style.backgroundColor = "white";
+            }
+
+            // this is for side import action
+            function openSideF() {
+              document.getElementById("mySidebarF").style.width = "30%";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+
+            function closeSideF() {
+              document.getElementById("mySidebarF").style.width = "0";
               document.body.style.backgroundColor = "white";
             }
         </script>
