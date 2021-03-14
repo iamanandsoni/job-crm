@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Anisha GLobal - Admin</title>
+        <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="favicon.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <!-- Header Nav start from here -->
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/anisha-global-logo-w.png" alt="Anisha Global Admin" title="Anisha Global Admin" width="160px">
+            </a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group" style="width: 500px;">
+                    <input class="form-control" type="text" placeholder="Search by Name, Job, Email & Company" aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="notiDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notiDropdown" style="width:250px;">
+                        <p class="px-3">Notifications</p>
+                        <table class="table">
+                            <tr>
+                              <td>First Notification</td>
+                            </tr>
+                            <tr>
+                              <td>Second Notification</td>
+                            </tr>
+                            <tr>
+                              <td>Third Notification</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#"><i class="far fa-user"></i> My Profile</a>
+                        <a class="dropdown-item" href="#"><i class="far fa-thumbs-up"></i> Give Us Feedback</a>
+                        <a class="dropdown-item" href="#"><i class="far fa-question-circle"></i> Help Center</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Header Nav end here -->
+
+        <!-- Whole Page Content Start from here -->
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link active" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Primary</div>
+                            <a class="nav-link" href="candidates.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Candidates
+                                <div class="sb-sidenav-collapse-arrow"></div>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-building"></i></div>
+                                Companies
+                                <div class="sb-sidenav-collapse-arrow"></div>
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-circle"></i></div>
+                                Contacts
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-briefcase"></i></div>
+                                Jobs
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-calendar-check"></i></div>
+                                Task & Meetings
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Secondary</div>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
+                                Placements & Invoices
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cogs"></i></div>
+                                Settings
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Candidates or Companies
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Dashboard Content Start from Here -->
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="my-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="mb-4">
+                            <h4 class="mb-2">Getting Started</h4>
+                            <p>The following checklist will help you quickly setup Recruit CRM.</p>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-8">
+                                <div class="row gs-link">
+                                    <div class="col-md-6">
+                                        <div class="card bg-normal text-white mb-4">
+                                            <div class="card-body d-flex align-items-center justify-content-between">
+                                                <div class="text-dark stretched-link" onclick="openSide()" style="cursor:pointer">
+                                                    <p><span class="mr-3"><i class="fas fa-user text-primary"></i></span>Import Candidates</p>
+                                                </div>
+                                                <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="mySidebar" class="sideact">
+                                            <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
+                                            <div class="py-3 px-4">
+                                            <header class="mb-4"><p><b>Import Candidates</b></p></header>
+                                            <section class="py-2">
+                                                <div class="">
+                                                    <div class="mb-4">
+                                                        <h4 class="text-primary">Choose a CSV or XLS (Excel) file to import</h4>
+                                                        <p><a href="https://s3-ap-southeast-1.amazonaws.com/production-recruitcrm/samplecsvdata/sample_candidate_csv.csv" id="sTest-sampleFileLink">Click here</a> to download a sample file</p>
+                                                    </div>
+                                                    <div class="mb-4"><input type="file" accept=".xls,.csv" id="">
+                                                    <p class="mt-3">Upload your CSV or XLS (Excel) file with a header row. Make sure the CSV or XLS (Excel) file has columns for all the required fields on Contacts.</p>
+                                                    </div>
+                                                    <div class="">
+                                                        <h5 class="text-primary"><i class="fas fa-question-circle mr-2"></i>Kindly ensure that</h5>
+                                                        <ul class="tips-list">
+                                                            <li><i class="fas fa-check"></i>File must be CSV or XLS (Excel) format type.</li>
+                                                            <li><i class="fas fa-check"></i>Date field format is '17 Jan 1991</li>
+                                                            <li><i class="fas fa-check"></i>You can upload upto 10000 records at a time</li>
+                                                            <li><i class="fas fa-check"></i>Please note that all the special characters in 'FirstName' and 'LastName' will be removed.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section> 
+                                            <footer class="modal-card-foot d-flex align-items-center justify-content-s-b"></footer>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-normal text-white mb-4">
+                                            <div class="card-body d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link" href="#">
+                                                    <p><span class="mr-3"><i class="fas fa-building text-warning"></i></span>Import Companies & Contacts</p>
+                                                </a>
+                                                <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-normal text-white mb-4">
+                                            <div class="card-body d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link" href="#">
+                                                    <p><span class="mr-3"><i class="fas fa-envelope text-success"></i></span>Connect Email Account</p>
+                                                </a>
+                                                <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-normal text-white mb-4">
+                                            <div class="card-body d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link" href="#">
+                                                    <p><span class="mr-3"><i class="fab fa-chrome text-danger"></i></span>Recruit CRM Chrome</p>
+                                                </a>
+                                                <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-normal text-white mb-4">
+                                            <div class="card-body d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link" href="#">
+                                                    <p><span class="mr-3"><i class="fas fa-user-plus text-primary"></i></span>Invite Teammates</p>
+                                                </a>
+                                                <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-normal text-white mb-4">
+                                            <div class="card-body d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link" href="#">
+                                                    <p><span class="mr-3"><i class="fas fa-video text-dark"></i></span>Help Videos</p>
+                                                </a>
+                                                <div class="text-dark"><i class="fas fa-check-circle"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <h5 class="mb-2">Have Questions?</h5>
+                                    <p class="mb-2">Use the chat icon at the bottom to ask us any questions you have. If you’re in a hurry, You can visit our help center to read our help guides.</p>
+                                    <a href="#">Visit Help Center ></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body"><i class="fas fa-users mr-3"></i>Candidates Performance</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="candidates.html">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body"><i class="fas fa-building mr-3"></i>Companies Performance</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body"><i class="fas fa-user-circle mr-3"></i>Jobs Listings</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body"><i class="fas fa-calendar-check mr-3"></i>Task & Meetings</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                It’s really late, get some sleep buddy!
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>All Jobs</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div> 
+                                                </th>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>Applied</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div> 
+                                                </th>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>Assigned</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div> 
+                                                </th>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>Interview Scheduled</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div> 
+                                                </th>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>Interview Attend</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div> 
+                                                </th>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>Placed</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>                        
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <!-- <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot> -->
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>2011/04/25</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>2011/07/25</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>2009/01/12</td>
+                                                <td>2009/01/12</td>
+                                                <td>$86,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>2012/03/29</td>
+                                                <td>2012/03/29</td>
+                                                <td>$433,060</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>2008/11/28</td>
+                                                <td>2008/11/28</td>
+                                                <td>$162,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brielle Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>2012/12/02</td>
+                                                <td>2012/12/02</td>
+                                                <td>$372,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Herrod Chandler</td>
+                                                <td>Sales Assistant</td>
+                                                <td>San Francisco</td>
+                                                <td>2012/08/06</td>
+                                                <td>2012/08/06</td>
+                                                <td>$137,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rhona Davidson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Tokyo</td>
+                                                <td>2010/10/14</td>
+                                                <td>2010/10/14</td>
+                                                <td>$327,900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Colleen Hurst</td>
+                                                <td>Javascript Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>2009/09/15</td>
+                                                <td>2009/09/15</td>
+                                                <td>$205,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sonya Frost</td>
+                                                <td>Software Engineer</td>
+                                                <td>Edinburgh</td>
+                                                <td>2008/12/13</td>
+                                                <td>2008/12/13</td>
+                                                <td>$103,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jena Gaines</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>2008/12/19</td>
+                                                <td>2008/12/19</td>
+                                                <td>$90,560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quinn Flynn</td>
+                                                <td>Support Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>2013/03/03</td>
+                                                <td>2013/03/03</td>
+                                                <td>$342,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Charde Marshall</td>
+                                                <td>Regional Director</td>
+                                                <td>San Francisco</td>
+                                                <td>2008/10/16</td>
+                                                <td>2008/10/16</td>
+                                                <td>$470,600</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <svg class="svg-inline--fa fa-chart-area fa-w-16 mr-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-area" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM372.7 159.5L288 216l-85.3-113.7c-5.1-6.8-15.5-6.3-19.9 1L96 248v104h384l-89.9-187.8c-3.2-6.5-11.4-8.7-17.4-4.7z"></path></svg>
+                                Area Chart Example
+                            </div>
+                            <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="myAreaChart" width="1506" height="451" style="display: block; height: 361px; width: 1205px;" class="chartjs-render-monitor"></canvas></div>
+                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <svg class="svg-inline--fa fa-chart-bar fa-w-16 mr-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-bar" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M332.8 320h38.4c6.4 0 12.8-6.4 12.8-12.8V172.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V76.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-288 0h38.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zM496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg>
+                                        Bar Chart Example
+                                    </div>
+                                    <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="myBarChart" width="712" height="356" class="chartjs-render-monitor" style="display: block; height: 285px; width: 570px;"></canvas></div>
+                                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <svg class="svg-inline--fa fa-chart-pie fa-w-17 mr-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-pie" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 512" data-fa-i2svg=""><path fill="currentColor" d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"></path></svg>
+                                        Pie Chart Example
+                                    </div>
+                                    <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="myPieChart" width="712" height="356" class="chartjs-render-monitor" style="display: block; height: 285px; width: 570px;"></canvas></div>
+                                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; 2020 JOBS PORTAL. All Rights Reserved. Design by: <a href="https://www.posistrength.com/Posistrength_plan.pdf" target="_blank">Posistrength Software Solution Pvt.Ltd</a></div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- Dashboard Content End Here -->
+        </div>
+        <!-- Whole Page Content End here -->
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="assets/demo/chart-pie-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+
+        <script>
+            // this is for side import action
+            function openSide() {
+              document.getElementById("mySidebar").style.width = "50%";
+            }
+
+            function closeSide() {
+              document.getElementById("mySidebar").style.width = "0";
+            }
+        </script>
+    </body>
+</html>
