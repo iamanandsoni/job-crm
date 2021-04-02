@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Anisha GLobal - Task & Meetings</title>
+        <title>Anisha GLobal - Add Meeting</title>
         <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="favicon.png">
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
@@ -115,129 +115,102 @@
                 </nav>
             </div>
 
-            <!-- Task & Meetings Content Start from Here -->
+            <!-- Add Task Content Start from Here -->
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="my-4">Task & Meetings</h1>
+                        <h1 class="my-4">Add Meeting</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Task & Meetings</li>
+                            <li class="breadcrumb-item active">Add Meeting</li>
                         </ol>
 
-                        <div class="row mb-2 d-flex justify-content-end">
-                            <div class="col-md-5">
-                                <div class="mt-2">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label for="" class="col-md-3 col-form-label">Filter By User:</label>
-                                            <div class="col-md-9">
-                                                <select class="form-control" id="" name="">
-                                                    <option value="" selected="selected">User 1</option>
-                                                    <option value="">User 2</option>
-                                                    <option value="">User 3</option>
-                                                </select>
-                                            </div>
+                        <div class="row d-flex justify-content-center" id="AddCandidateForm">
+                            <div class="col-md-8 bg-light p-4 my-4">  
+                            <!-- Personal Information -->
+                            <div><h4 class="text-success">Add Meeting</h4></div>
+                            <hr>
+                            <form>
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="formrow">
+                                            <label for="">Title</label>
+                                            <input class="form-control" placeholder="Staff meeting & Review to discuss issue" name="" type="text">
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-2 offset-md-3">
-                                <a href="add-task.html">
-                                    <div class="bg-success text-white mb-1">
-                                        <div class="p-3 d-flex align-items-center justify-content-between">
-                                            <div><i class="fas fa-plus mr-3"></i>Add Task</div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="formrow ">
+                                            <label for="">Where</label>
+                                            <input class="form-control" placeholder="35, WF Park, New York" name="" type="text">
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-md-2">
-                                <a href="add-meeting.html">
-                                    <div class="bg-success text-white mb-1">
-                                        <div class="p-3 d-flex align-items-center justify-content-between">
-                                            <div><i class="fas fa-plus mr-3"></i>Add Meeting</div>
+                                    <div class="col-md-6">
+                                        <div class="formrow ">
+                                            <label for="">Related to</label>
+                                            <input class="form-control" placeholder="Name of Candidate/Company/Contact/Job" name="" type="text">
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <div class="row mb-3 d-flex justify-content-end">
-                            <div class="col-md-3" style="border-right: 1px solid #ced4da;">
-                                <div class="mb-4 pt-3 pr-3">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="">Sort By:</label>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="formrow ">
+                                            <label for="">Starting On</label>
+                                            <input class="form-control" placeholder="" name="" type="date">
+                                            <p>Time Zone: (India, Sri Lanka Time)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="formrow ">
+                                            <label for="">Start Time</label>
+                                            <input class="form-control" placeholder="" name="" type="time">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="formrow ">
+                                            <label for="">End Time</label>
+                                            <input class="form-control" placeholder="" name="" type="time">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="formrow">
+                                            <label for="">Reminder</label>
                                             <select class="form-control" id="" name="">
-                                                <option value="" selected="selected">Tasks</option>
-                                                <option value="">Meetings</option>
-                                                <option value="">Tasks & Meetings</option>
+                                                <option value="" selected="selected">No Reminder</option>
+                                                <option value="">0 Min Before</option>
+                                                <option value="">15 Min Before</option>
+                                                <option value="">30 Min Before</option>
+                                                <option value="">1 Hour Before</option>
+                                                <option value="">1 Day Before</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="">Open</label>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Past / Overdue
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Upcoming
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="row p-3">
-                                    <div class="col-md-12 mb-0">
-                                        <div class="text-center">
-                                            <div class="mx-auto mb-4" style="border: 2px solid #28a745; border-radius: 50%; width: 80px; height: 80px; line-height: 95px;">
-                                                <div><i class="fas fa-tasks text-success" style="font-size: 40px;"></i></div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <h5 class="mb-2">Need To Get Something Done?</h5>
-                                                <p>Add Tasks & Get Email Reminders</p>
-                                            </div>
-                                            <a href="add-task.html">
-                                                <div class="bg-success text-white mb-1">
-                                                    <div class="p-3">
-                                                        <div><i class="fas fa-plus mr-3"></i>Add Task</div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="formrow">
+                                            <label for="">Attendees (Write with Commas)</label>
+                                            <input class="form-control" placeholder="Candidates, Contact, Users" name="" type="text">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 offset-md-1">
-                                <div class="row p-3">
-                                    <div class="col-md-12 mb-0">
-                                        <div class="text-center">
-                                            <div class="mx-auto mb-4" style="border: 2px solid #28a745; border-radius: 50%; width: 80px; height: 80px; line-height: 95px;">
-                                                <div><i class="far fa-calendar-alt text-success" style="font-size: 40px;"></i></div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <h5 class="mb-2">Have A Meeting To Get To?</h5>
-                                                <p>Don't Worry, We'll Send You An Email Reminder :)</p>
-                                            </div>
-                                            <a href="add-meeting.html">
-                                                <div class="bg-success text-white mb-1">
-                                                    <div class="p-3">
-                                                        <div><i class="fas fa-plus mr-3"></i>Add Meeting</div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                <div class="row mb-3">
+                                    <div class="col-md-12">
+                                        <div class="formrow">
+                                            <label for="">Description</label>
+                                            <textarea class="form-control" placeholder="Type a short description of the event for attendees" name="" cols="50" rows="8"></textarea>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="formrow">
+                                            <button type="submit" class="btn btn-lg btn-success">Add <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
 
                     </div>
@@ -255,7 +228,7 @@
                     </div>
                 </footer>
             </div>
-            <!-- Task & Meetings Content End Here -->
+            <!-- Add Task Content End Here -->
         </div>
         <!-- Whole Page Content End here -->
 
